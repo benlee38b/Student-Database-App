@@ -25,7 +25,7 @@ public class Student {
 
        setStudentId();
 
-       System.out.println(firstName + " " + lastName + " year: " + year + " student ID: " + studentId);
+
     }
 
     // generate an ID
@@ -45,9 +45,6 @@ public class Student {
                 this.tuitionBalance += costOfCourse;
             } else break;
         }while (1 != 0);
-        System.out.println("ENROLLED IN: " + courses);
-        System.out.println("TUITION BALANCE: " + tuitionBalance);
-
     }
 
     // view balance.
@@ -65,4 +62,11 @@ public class Student {
         viewBalance();
     }
     // show status
+    public String toString() {
+        return "Name: " + firstName + " " + lastName +
+                "\nYear: " + year +
+                "\nStudent ID: " + studentId +
+                "\nCourses enrolled: " + courses +
+                "\nBalance: £" + tuitionBalance;
+    }
 }
